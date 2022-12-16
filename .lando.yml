@@ -1,0 +1,4 @@
+# These shifts the resultant container name becomes addressable by drush across the total project without just having to lando ssh into the container itself
+tooling:
+  drush:
+    service: drupal

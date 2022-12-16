@@ -29,4 +29,4 @@ config:
 # These are tools that are commonly used during development for this template.
 tooling:
   drush:
-    service: drupal
+    service: app
