@@ -1,0 +1,14 @@
+uuid: 4b34d50d-2e8c-49e0-98c4-d11e2a5d8d0b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - emofsnead@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
