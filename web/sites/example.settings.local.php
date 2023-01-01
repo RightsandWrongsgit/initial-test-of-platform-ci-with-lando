@@ -41,12 +41,6 @@ assert_options(ASSERT_EXCEPTION, TRUE);
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 
 /**
- * Enable lando development services.
- */
-# $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/lando.services.yml';
-
-
-/**
  * Show all error messages, with backtrace information.
  *
  * In case the error level could not be fetched from the database, as for
@@ -72,7 +66,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  *
  * Only use this setting once the site has been installed.
  */
-$settings['cache']['bins']['render'] = 'cache.backend.null';
+# $settings['cache']['bins']['render'] = 'cache.backend.null';
 
 /**
  * Disable caching for migrations.
@@ -94,7 +88,7 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
  *
  * Only use this setting once the site has been installed.
  */
-$settings['cache']['bins']['page'] = 'cache.backend.null';
+# $settings['cache']['bins']['page'] = 'cache.backend.null';
 
 /**
  * Disable Dynamic Page Cache.
@@ -103,21 +97,7 @@ $settings['cache']['bins']['page'] = 'cache.backend.null';
  * cacheability metadata is present (and hence the expected behavior). However,
  * in the early stages of development, you may want to disable it.
  */
-$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-
-/**
- * Consider if there is a need to Configure static caches.
- *
- * Note: you should test with the config, bootstrap, and discovery caches enabled to 
- * test that metadata is cached as expected. However, in the early stages of development,
- * you may want to disable them. Overrides to these bins must be explicitly set for each 
- * bin to change the default configuration provided by Drupal core in core.services.yml. 
- * See https://www.drupal.org/node/2754947
- */
-
- // $settings['cache']['bins']['bootstrap'] = 'cache.backend.null';
- // $settings['cache']['bins']['discovery'] = 'cache.backend.null';
- // $settings['cache']['bins']['config'] = 'cache.backend.null';
+# $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 /**
  * Allow test modules and themes to be installed.
@@ -126,7 +106,7 @@ $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
  * During development it can be useful to install test extensions for debugging
  * purposes.
  */
-$settings['extension_discovery_scan_tests'] = FALSE;
+# $settings['extension_discovery_scan_tests'] = TRUE;
 
 /**
  * Enable access to rebuild.php.
