@@ -1,8 +1,8 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: a751448a-3058-41b9-88a8-ca61ddefc4c1
-name: 'Initial Test of Platform CI with Lando'
+uuid: 989db6eb-2f81-42c7-88a1-bfac439bea1a
+name: 'Drupal 9 Site on Platformsh with Lando for CI'
 mail: emofsnead@gmail.com
 slogan: ''
 page:
