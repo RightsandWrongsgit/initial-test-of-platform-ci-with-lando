@@ -41,12 +41,6 @@ assert_options(ASSERT_EXCEPTION, TRUE);
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 
 /**
-* Enable our personalized local development services. Not subject to the idiosyncrasy of
-* Drupal scaffolding update or rebuild overwrites.
-*/
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/my-development.services.yml';
-
-/**
  * Show all error messages, with backtrace information.
  *
  * In case the error level could not be fetched from the database, as for
