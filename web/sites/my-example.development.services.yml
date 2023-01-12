@@ -1,4 +1,4 @@
-# Local development services.
+# Local development services file that is saved to GitHub and is called by my-example.settings.local.php
 #
 # To activate this feature, follow the instructions at the top of the
 # 'example.settings.local.php' file, which sits next to this file.
