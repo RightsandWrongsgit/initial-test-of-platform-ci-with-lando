@@ -80,12 +80,6 @@ Switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'local';
 // Config Split case ‘local’:
   $config['config_split.config_split.local']['status'] = TRUE;
-// Environment indicator default, dark text on brilliant red:
-  $config['environment_indicator.indicator']['bg_color'] = '#ff531a';
-  $config['environment_indicator.indicator']['fg_color'] = '#902400';
-  $config['environment_indicator.indicator']['name'] = 'staged';
-// Config Split// Config Split default:
-  $config['config_split.config_split.staged']['status'] = TRUE;
 }
 
 // Automatic Platform.sh settings.
