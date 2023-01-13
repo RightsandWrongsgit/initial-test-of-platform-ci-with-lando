@@ -38,6 +38,11 @@ $config['config_split.config_split.develop']['status'] = FALSE;
 $config['config_split.config_split.staged']['status'] = FALSE;
 $config['config_split.config_split.main']['status'] = FALSE;
 
+// Detect the environment ($env) from the Platform_Branch
+if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
+  $env = getenv('PLATFORM_BRANCH');
+}
+
 // Detect Lando set environment variable ($env) to local
 if (isset($_ENV['LANDO_INFO'])) { define('LANDO_INFO', json_decode($_ENV['LANDO_INFO'], TRUE));
 }
@@ -46,9 +51,9 @@ $env = 'local';
 }
 
 // Detect the environment ($env) from the Platform_Branch
-if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
-  include $app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php';
-}
+//if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
+//  include $app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php';
+//}
 
 // Enable the config-split definition for the environment
 Switch ($env) {
