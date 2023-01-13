@@ -1,0 +1,15 @@
+uuid: 37c26109-89f7-415f-8f1b-23a169ff7dfb
+langcode: en
+status: false
+dependencies: {  }
+id: main
+label: main
+description: 'main is the name of our production environment.  As we add modules we only want in production, like Google Analytics, and Mailing, we will identify Complete Splits of these modules.'
+weight: 0
+folder: ../config/main
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
