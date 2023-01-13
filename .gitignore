@@ -10,7 +10,7 @@
 /web/libraries/
 console/
 
-# Ignore sensitive information & exposing file to host
+# Ignore sensitive information & exposing file to host, we are doing a my-example.settings.local.php you need to look at
 /web/sites/*/settings.local.php
 
 # Ignore Drupal's file directory
