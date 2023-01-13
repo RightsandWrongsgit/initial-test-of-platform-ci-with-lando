@@ -40,7 +40,7 @@ $config['config_split.config_split.main']['status'] = FALSE;
 
 // Detect the environment ($env) from the Platform_Branch
 //if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
-  $env = getenv('PLATFORM_BRANCH');
+ // $env = getenv('PLATFORM_BRANCH');
 //}
 
 // Detect Lando set environment variable ($env) to local
@@ -48,6 +48,8 @@ if (isset($_ENV['LANDO_INFO'])) { define('LANDO_INFO', json_decode($_ENV['LANDO_
 }
 if (defined('LANDO_INFO')) {
 $env = 'local';
+} else{
+$env = getenv('PLATFORM_BRANCH'); 
 }
 
 // Detect the environment ($env) from the Platform_Branch
