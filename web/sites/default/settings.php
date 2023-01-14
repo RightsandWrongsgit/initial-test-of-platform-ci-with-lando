@@ -144,6 +144,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'develop';
 // Config Split case 'develop':
   $config['config_split.config_split.develop']['status'] = TRUE;
+  break;
   case 'staged':
 // Environment indicator case 'staged':
   $config['environment_indicator.indicator']['bg_color'] = '#fff176';
@@ -151,6 +152,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'staged';
 // Config Split case ‘staged’:
   $config['config_split.config_split.staged']['status'] = TRUE;
+  break;
   case 'main':
 // Environment indicator case 'main':
   $config['environment_indicator.indicator']['bg_color'] = '#ef5350';
@@ -158,6 +160,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'main';
 // Config Split case ‘main’:
   $config['config_split.config_split.main']['status'] = TRUE;
+  break;
   default:
 //  case 'local':
 // Environment indicator case 'local', white text on red:
