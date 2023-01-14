@@ -124,11 +124,11 @@ $config['config_split.config_split.develop']['status'] = FALSE;
 $config['config_split.config_split.staged']['status'] = FALSE;
 $config['config_split.config_split.main']['status'] = FALSE;
 // Detect Lando set environment variable ($env) to local - NOTE THIS APPEARS TO WORK
-if (isset($_ENV['LANDO_INFO'])) { define('LANDO_INFO', json_decode($_ENV['LANDO_INFO'], TRUE));
-}
-if (defined('LANDO_INFO')) {
-$env = 'local';
-}
+//if (isset($_ENV['LANDO_INFO'])) { define('LANDO_INFO', json_decode($_ENV['LANDO_INFO'], TRUE));
+//}
+//if (defined('LANDO_INFO')) {
+//$env = 'local';
+//}
 // Detect the environment ($env) from the Platform_Branch
 if (isset($_ENV['PLATFORM_ENVIRONMENT'])) { define('PLATFORM_BRANCH', json_decode($_ENV['PLATFORM_BRANCH'], TRUE));
 }
