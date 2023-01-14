@@ -103,6 +103,12 @@ $settings['file_scan_ignore_directories'] = [
 //  include $app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php';
 //}
 
+// Detect the environment ($env) from the Platform_Branch NOTE - DID NOT WORK
+//if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
+//  include $app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php';
+//  $env = getenv('PLATFORM_BRANCH'); 
+//}
+
 // Detect Platnformsh environment variable and grab the branch else set ($env) to local
 //if (isset($_ENV['LANDO_INFO'])) { define('LANDO_INFO', json_decode($_ENV['LANDO_INFO'], TRUE));
 //}
@@ -124,8 +130,9 @@ if (defined('LANDO_INFO')) {
 $env = 'local';
 }
 // Detect the environment ($env) from the Platform_Branch
-if (file_exists($app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php')) {
-  include $app_root . '/' . $site_path . '/settings.' . getenv('PLATFORM_BRANCH') . '.php';
+if (isset($_ENV['PLATFORM_ENVIRONMENT'])) { define('PLATFORM_BRANCH', json_decode($_ENV['PLATFORM_BRANCH'], TRUE));
+}
+if (defined('PLATFORM_BRANCH')) {
   $env = getenv('PLATFORM_BRANCH'); 
 }
 // Enable the config-split definition for the environment
@@ -151,7 +158,8 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'main';
 // Config Split case ‘main’:
   $config['config_split.config_split.main']['status'] = TRUE;
-  case 'local':
+  default:
+//  case 'local':
 // Environment indicator case 'local', white text on red:
   $config['environment_indicator.indicator']['bg_color'] = '#006600';
   $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
