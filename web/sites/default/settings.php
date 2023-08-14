@@ -53,6 +53,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'develop';
 // Config Split case 'develop':
   $config['config_split.config_split.develop']['status'] = TRUE;
+  $config['stage_file_proxy.settings']['origin'] = '';
   break;
   case 'staged':
 // Environment indicator case 'staged':
@@ -61,6 +62,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'staged';
 // Config Split case ‘staged’:
   $config['config_split.config_split.staged']['status'] = TRUE;
+  $config['stage_file_proxy.settings']['origin'] = '';
   break;
   case 'main':
 // Environment indicator case 'main':
@@ -69,6 +71,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'main';
 // Config Split case ‘main’:
   $config['config_split.config_split.main']['status'] = TRUE;
+  $config['stage_file_proxy.settings']['origin'] = '';
   break;
   default:
 //  case 'local':
@@ -78,6 +81,7 @@ switch ($env) {
   $config['environment_indicator.indicator']['name'] = 'local';
 // Config Split case ‘local’:
   $config['config_split.config_split.local']['status'] = TRUE;
+  $config['stage_file_proxy.settings']['origin'] = `platform url -e main --primary --pipe`;
 }
 
 // Automatic Platform.sh settings.

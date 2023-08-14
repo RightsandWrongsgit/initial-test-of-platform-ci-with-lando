@@ -23,6 +23,8 @@
     "drupal/core-recommended": "^9.3",
     "drupal/environment_indicator": "^4.0",
     "drupal/redis": "^1.5",
+    "drupal/stage_file_proxy": "^2.0",
+    "drupal/structure_sync": "^2.0",
     "drush/drush": "^11.4",
     "platformsh/config-reader": "^2.4"
   },
