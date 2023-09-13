@@ -1,7 +1,11 @@
-tooling:
-  drush:
-    service: drupal
 name: initial-test-of-platform-ci-with-lando
 recipe: platformsh
 config:
   id: 2ygxd5balkqjg
+services:
+  drupal:
+    overrides:
+      image: docker.registry.platform.sh/php-8.1:stable
+tooling:
+  drush:
+    service: drupal    
