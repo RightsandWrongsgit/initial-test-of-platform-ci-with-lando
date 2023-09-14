@@ -5,7 +5,7 @@ config:
 services:
   drupal:
     overrides:
-      image: docker.registry.platform.sh/php-8.1:stable
+      image: 'docker.registry.platform.sh/php-8.1:stable'
 tooling:
   drush:
-    service: drupal    
+    service: drupal
