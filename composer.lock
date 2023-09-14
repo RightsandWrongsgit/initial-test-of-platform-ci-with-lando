@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eac679f7821274dba0c1090c768fd727",
+    "content-hash": "e190c5a93fe8c79a146c618937664bab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1789,17 +1789,17 @@
         },
         {
             "name": "drupal/environment_indicator",
-            "version": "4.0.12",
+            "version": "4.0.15",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/environment_indicator.git",
-                "reference": "4.0.12"
+                "reference": "4.0.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/environment_indicator-4.0.12.zip",
-                "reference": "4.0.12",
-                "shasum": "4ccb08b69bb7cb2e093db209b7839484823bb746"
+                "url": "https://ftp.drupal.org/files/projects/environment_indicator-4.0.15.zip",
+                "reference": "4.0.15",
+                "shasum": "0db0591160af483a3c069aac955bed9e5eced252"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -1807,8 +1807,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.12",
-                    "datestamp": "1671556019",
+                    "version": "4.0.15",
+                    "datestamp": "1693578336",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1823,6 +1823,10 @@
                 {
                     "name": "e0ipso",
                     "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "isholgueras",
+                    "homepage": "https://www.drupal.org/user/733162"
                 },
                 {
                     "name": "mrfelton",
@@ -1901,29 +1905,31 @@
         },
         {
             "name": "drupal/stage_file_proxy",
-            "version": "2.0.2",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "2.0.2"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.0.2.zip",
-                "reference": "2.0.2",
-                "shasum": "187019fdbb7b805a66068c6ca93d211f439d288b"
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "0a4d6cb83c4f5da20542e4c9f5fed32dbf490154"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^9 || ^10",
+                "php": ">=8"
             },
             "require-dev": {
+                "drupal/coder": "^8.3",
                 "drush/drush": "^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1670369228",
+                    "version": "2.1.1",
+                    "datestamp": "1691507193",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1936,6 +1942,17 @@
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/phpcs -p ."
+                ],
+                "phpcbf": [
+                    "vendor/bin/phpcbf -p ."
+                ],
+                "test": [
+                    "@phpcs"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1985,17 +2002,17 @@
         },
         {
             "name": "drupal/structure_sync",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/structure_sync.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/structure_sync-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "673b9e30495dee3987cda9c1f5a15de0905886da"
+                "url": "https://ftp.drupal.org/files/projects/structure_sync-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "eb744625ba3a8caf731dc7406b29797c8416f744"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
@@ -2007,8 +2024,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1666800906",
+                    "version": "2.0.5",
+                    "datestamp": "1681378126",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
