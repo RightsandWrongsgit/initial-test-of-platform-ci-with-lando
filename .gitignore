@@ -61,3 +61,7 @@ sites/all/themes/README.txt
 # Ignore paths that contain user-generated content
 sites/*/files
 sites/*/private
+
+# Ignore directories created by Platform.sh
+
+.subversion
