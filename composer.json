@@ -16,6 +16,7 @@
   ],
   "require": {
     "composer/installers": "^1.9",
+    "drupal/config_filter": "^1.12",
     "drupal/config_split": "^1.9",
     "drupal/config_suite": "^2.0",
     "drupal/core-composer-scaffold": "^10",
