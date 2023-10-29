@@ -42,4 +42,4 @@ development_project:
 	cd ~/initial-test-of-platform-ci-with-lando
 	cp web/sites/my-example.settings.local.php web/sites/default/settings.local.php
 	cd ~/initial-test-of-platform-ci-with-lando
-	lando rebuild
+	
