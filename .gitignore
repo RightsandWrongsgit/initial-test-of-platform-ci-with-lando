@@ -39,6 +39,7 @@ node_modules
 /.env
 
 # Ignore mounts
+config/sync
 web/sites/default/files
 tmp
 private
@@ -63,5 +64,4 @@ sites/*/files
 sites/*/private
 
 # Ignore directories created by Platform.sh
-
 .subversion
