@@ -35,10 +35,6 @@ disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
-    # Writeable configuration sync location when running out of date database updates
-    '/config/sync':
-        source: local
-        source_path: 'sync'
     # The default Drupal files directory.
     '/web/sites/default/files':
         source: local
