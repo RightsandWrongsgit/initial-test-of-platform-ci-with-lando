@@ -25,7 +25,7 @@
     "drupal/devel_entity_updates": "^4.1",
     "drupal/environment_indicator": "^4.0",
     "drupal/redis": "^1.5",
-    "drupal/stage_file_proxy": " 2.1.2",
+    "drupal/stage_file_proxy": "^2.1",
     "drupal/structure_sync": "^2.0",
     "drush/drush": "^12",
     "platformsh/config-reader": "^2.4"
