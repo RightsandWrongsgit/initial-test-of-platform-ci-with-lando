@@ -3,6 +3,7 @@ _core:
 hotlink: false
 origin: 'http://www.main-bvxea6i-2ygxd5balkqjg.us-2.platformsh.site'
 origin_dir: sites/default/files
+proxy_headers: ''
 use_imagecache_root: true
 verify: true
 excluded_extensions: ''
