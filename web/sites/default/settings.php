@@ -55,7 +55,7 @@ $settings['file_scan_ignore_directories'] = [
  * amount of database queries. However, some sites may use state with a
  * lot of dynamic keys which could result in a very large cache.
  */
-# $settings['state_cache'] = TRUE;
+$settings['state_cache'] = TRUE;
 
 /**
  * Node migration type.
