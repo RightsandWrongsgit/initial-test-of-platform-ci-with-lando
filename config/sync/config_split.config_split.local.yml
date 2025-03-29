@@ -6,11 +6,12 @@ id: local
 label: local
 description: 'Our settings.php file was set up to detect Lando as a machine-environment so we can make any uniquely local modifications to our module inclusions and configurations'
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../config/local
 module:
   stage_file_proxy: 0
 theme: {  }
-blacklist: {  }
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+complete_list: {  }
+partial_list: {  }
