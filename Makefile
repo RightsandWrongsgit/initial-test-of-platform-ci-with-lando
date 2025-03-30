@@ -23,7 +23,7 @@ project_yours:
 update_project:
 	cd web/sites/default
 	rm -f settings.local.php
-	cd ~/initial-test-of-platform-ci-with-lando
+	cd ~/projects/initial-test-of-platform-ci-with-lando
 	cp web/sites/my-update.settings.local.php web/sites/default/settings.local.php
 	cd ~/initial-test-of-platform-ci-with-lando
 	lando init --source cwd --recipe platformsh
@@ -39,7 +39,7 @@ update_project:
 development_project:
 	cd web/sites/default
 	rm -f settings.local.php
-	cd ~/initial-test-of-platform-ci-with-lando
+	cd ~/projects/initial-test-of-platform-ci-with-lando
 	cp web/sites/my-example.settings.local.php web/sites/default/settings.local.php
 	cd ~/initial-test-of-platform-ci-with-lando
 	
