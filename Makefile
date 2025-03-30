@@ -41,6 +41,7 @@ check_dir:
 .PHONY: update_project
 
 update_project:
+<<<<<<< HEAD
 	# Change to web/sites/default and remove settings.local.php
 	cd $(PWD)/web/sites/default && rm -f settings.local.php
 	# Check if source file exists, then copy it
@@ -49,6 +50,14 @@ update_project:
 
 
 
+=======
+	cd web/sites/default
+	rm -f settings.local.php
+	cd ~/projects/initial-test-of-platform-ci-with-lando
+	cp web/sites/my-update.settings.local.php web/sites/default/settings.local.php
+	cd ~/initial-test-of-platform-ci-with-lando
+	lando init --source cwd --recipe platformsh
+>>>>>>> ef921e629bc3d2327ca8385b2427a6c6d95adfd8
 
 ########################################################
 ## development_project   sets settings.local.php to   ##
@@ -56,6 +65,17 @@ update_project:
 ## is is set to call my-development.services.yml      ##
 ########################################################
 
+<<<<<<< HEAD
+=======
+
+.PHONY: development_project
+development_project:
+	cd web/sites/default
+	rm -f settings.local.php
+	cd ~/projects/initial-test-of-platform-ci-with-lando
+	cp web/sites/my-example.settings.local.php web/sites/default/settings.local.php
+	cd ~/initial-test-of-platform-ci-with-lando
+>>>>>>> ef921e629bc3d2327ca8385b2427a6c6d95adfd8
 	
 .PHONY: development_project
 
