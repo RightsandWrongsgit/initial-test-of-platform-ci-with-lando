@@ -31,11 +31,12 @@
  * or runtime) on development machines and to 0 in production.
  *
  * @see https://wiki.php.net/rfc/expectations
+ *
+ * assert_options(ASSERT_ACTIVE, TRUE);
+ * assert_options(ASSERT_EXCEPTION, TRUE);
  */
-assert_options(ASSERT_ACTIVE, TRUE);
-assert_options(ASSERT_EXCEPTION, TRUE);
-
-/**
+ 
+/* 
  * Enable local development services. This overwrites by scaffolding. 
  */
 # $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
