@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 989db6eb-2f81-42c7-88a1-bfac439bea1a
-name: 'Drupal CI/CD Workflow Base (Platform.sh now with DDEV)'
-mail: emofsnead@gmail.com
-slogan: 'ARMTEC Success found here...'
+name: 'YOUR PROJECT, Slogan, and email'
+mail: youremail@example.com
+slogan: 'All should be changed in Configuration/System/Basic Settings'
 page:
   403: ''
   404: ''
