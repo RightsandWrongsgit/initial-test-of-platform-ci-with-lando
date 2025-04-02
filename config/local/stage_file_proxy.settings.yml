@@ -1,9 +1,7 @@
-_core:
-  default_config_hash: ttd8HXcqwSjGgp-fWA3gUA8q4TNvXB0a72pkFlnF56g
 hotlink: false
-origin: 'http://www.main-bvxea6i-2ygxd5balkqjg.us-2.platformsh.site'
+origin: ''
 origin_dir: sites/default/files
 proxy_headers: ''
-use_imagecache_root: true
-verify: true
+use_imagecache_root: false
+verify: false
 excluded_extensions: ''
