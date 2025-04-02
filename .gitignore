@@ -44,7 +44,7 @@ node_modules
 # Ignore mounts
 web/sites/default/files
 tmp
-private
+# private
 .drush
 drush-backups
 .console
