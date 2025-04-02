@@ -44,12 +44,6 @@ mounts:
     '/tmp':
         source: local
         source_path: 'tmp'
-
-    # GROK recommended additional mount for config synd
-    '/config/sync':
-        source: local
-        source_path: 'sync'
-        
     # Private file uploads are stored outside the web root. The settings.platformsh.php
     # file will automatically configure Drupal to use this directory.
     '/private':
@@ -91,9 +85,6 @@ hooks:
         drush -y cache-rebuild
         drush -y updatedb
         drush -y config-import
-    
-    # GROK recommended cache rebuild
-    post_deploy: 'drush cache:rebuild'
 
 # The configuration of app when it is exposed to the web.
 web:
