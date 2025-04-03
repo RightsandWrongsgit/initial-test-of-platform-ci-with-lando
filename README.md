@@ -3,4 +3,4 @@ This respository provides a template to build a Drupal website with a CI/CD Work
 
 There is extensive detailed documentation on how this is put together and how you can clone the template to start your project.  The documentation also reviews modules you might find helpful for various things you want to include.  If you aren't real technical yet, the documentation also provides the basics on foundational knowledge to get you going.  Simply pull up HTTP://www.armtec.services in another tab in your browser and get going.
 
-Enjoy
+Enjoy!
