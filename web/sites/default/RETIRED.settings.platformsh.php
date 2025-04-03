@@ -92,13 +92,13 @@ if ($platformsh->hasRelationship('redis') && !InstallerKernel::installationAttem
 if ($platformsh->inRuntime()) {
   // Configure private and temporary file paths.
   if (!isset($settings['file_private_path'])) {
-    $settings['file_private_path'] = '/app/files/private'; // Updated to match mount.
+    $settings['file_private_path'] = $platformsh->appDir . '/private';
   }
   if (!isset($settings['file_temp_path'])) {
-    $settings['file_temp_path'] = '/tmp'; // Updated to match mount.
+    $settings['file_temp_path'] = $platformsh->appDir . '/tmp';
   }
 
-  // Configure the default PhpStorage and Twig template cache directories.
+// Configure the default PhpStorage and Twig template cache directories.
   if (!isset($settings['php_storage']['default'])) {
     $settings['php_storage']['default']['directory'] = $settings['file_private_path'];
   }

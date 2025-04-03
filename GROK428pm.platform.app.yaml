@@ -35,21 +35,19 @@ disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
+    # General-purpose writable directory for config and private files.
+    '/files':
+        source: local
+        source_path: 'files'
     # The default Drupal files directory.
     '/web/sites/default/files':
         source: local
-        source_path: 'files'
+        source_path: 'files_public'
     # Drupal gets its own dedicated tmp directory. The settings.platformsh.php
     # file will automatically configure Drupal to use this directory.
     '/tmp':
         source: local
         source_path: 'tmp'
-
-    # GROK recommended additional mount for config synd
-    '/config/sync':
-        source: local
-        source_path: 'sync'
-        
     # Private file uploads are stored outside the web root. The settings.platformsh.php
     # file will automatically configure Drupal to use this directory.
     '/private':
@@ -86,14 +84,15 @@ hooks:
     # fast.
     deploy: |
         set -e
+        mkdir -p /app/files/config/sync
+        chmod 755 /app/files/config/sync
+        mkdir -p /app/files/private
+        chmod 755 /app/files/private
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         drush -y cache-rebuild
         drush -y updatedb
         drush -y config-import
-    
-    # GROK recommended cache rebuild
-    post_deploy: 'drush cache:rebuild'
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -162,4 +161,3 @@ source:
     auto-update:
       command: |
         curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
-    

@@ -21,12 +21,18 @@ $settings['state_cache'] = TRUE;
 // Do not hardcode here to keep the template reusable and secure in a public repo.
 // $settings['hash_salt'] is intentionally left unset.
 
-// Config sync directory (outside webroot for security).
-$settings['config_sync_directory'] = '../config/sync';
+// Config sync directory (environment-specific).
+if (getenv('IS_DDEV_PROJECT') == 'true') {
+  // Use a relative path for DDEV local environment.
+  $settings['config_sync_directory'] = $app_root . '/' . $site_path . '/files/config/sync';
+} else {
+  // Use an absolute path for Platform.sh environments.
+  $settings['config_sync_directory'] = '/app/files/config/sync';
+}
 
 // File paths for Platform.sh compatibility (generic, no project-specific values).
 $settings['file_public_path'] = 'sites/default/files';
-$settings['file_private_path'] = '../private';
+$settings['file_private_path'] = '/app/files/private'; // Keep this for Platform.sh, adjust locally if needed.
 $settings['file_temp_path'] = '/tmp';
 
 // Trusted host patterns using a generic regex for Platform.sh domains.
