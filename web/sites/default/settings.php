@@ -22,13 +22,13 @@ $settings['state_cache'] = TRUE;
 // $settings['hash_salt'] is intentionally left unset.
 
 // Config sync directory (environment-specific).
-if (getenv('IS_DDEV_PROJECT') == 'true') {
+# if (getenv('IS_DDEV_PROJECT') == 'true') {
   // Use a relative path for DDEV local environment.
-  $settings['config_sync_directory'] = $app_root . '/' . $site_path . '/files/config/sync';
-} else {
+  $settings['config_sync_directory'] = '../config/sync';
+# } else {
   // Use an absolute path for Platform.sh environments.
-  $settings['config_sync_directory'] = '/app/files/config/sync';
-}
+  # $settings['config_sync_directory'] = '/app/files/config/sync';
+# }
 
 // File paths for Platform.sh compatibility (generic, no project-specific values).
 $settings['file_public_path'] = 'sites/default/files';
